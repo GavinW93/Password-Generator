@@ -1,3 +1,4 @@
+//define variables
 var char = 'abcdefghijklmnopqrstuvwxyz';
 var capschar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var num = '0123456789';
@@ -5,17 +6,14 @@ var sym = '!@#$%^&*=-_';
 var minlen=8;
 var maxlen= 128;
 //var value= 40;
-var mainValue= Math.floor((Math.random() * 128) + 8);
+//var mainValue= Math.floor((Math.random() * 128) + 8);
 var nothing=0;
 
 var charNum = document.getElementById("charNum");
-//var numBox = false;
-//var symBox = false;
-//var LBox = false;
-//var UBox = false;
+
 var submit = document.getElementById("generate");
 var yourPw = document.getElementById("password");
-//var charNum= 0;
+
 
 
 //begin the action
@@ -68,7 +66,7 @@ nothing =0;
     }
     return pwd;
 }
-
+//copy password
 function copyFunction() {
   var copyText = document.getElementById("password");
   copyText.select();
