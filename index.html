@@ -10,29 +10,45 @@
     <title>Password Generator</title>
   </head>
   <body>
-    <div class ="main">
+   
                         <header>
                           <h1>Password Generator</h1>
+
                         </header>
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-8">
+                                
+                              
+                        <div class ="main">
                         <h2>Generate a Password</h2>
                      
-
+                    
                       <div class ="submain">
+
+                        
+                        
                                     <textarea
                                     id="password"
                                     placeholder="Your Secure Password"
+                                    
                                   ></textarea>
+                                  How many characters? <input type="number" id="charNum" value="30" min="8" max="128" /><br />
                                   <button id="generate"  onClick="generate();"> Generate Password</button>
-                                  <button ID="copy" onclick="myFunction()">Copy to Clipboard</button>
+                                  <button ID="copy" onclick="copyFunction()">Copy to Clipboard</button>
                     
-                                  </button>
+                                
+                                 
                                 </div>
+                                
+                               
+                             
                               </div>
     
-              
+                            </div>
                     
 
-How many characters? <input type="number" id="charNum" value="30" min="12" max="128" /><br />
+
 
 <!--Number: <input type="checkbox" id="num"/>-->
 <!--Symbol: <input type="checkbox" id="sym"/><br />-->

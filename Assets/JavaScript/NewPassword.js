@@ -4,8 +4,8 @@ var num = '0123456789';
 var sym = '!@#$%^&*=-_';
 var minlen=8;
 var maxlen= 128;
-var value= 40;
-
+//var value= 40;
+var mainValue= Math.floor((Math.random() * 128) + 8);
 
 var charNum = document.getElementById("charNum");
 //var numBox = document.getElementById("num");
@@ -15,11 +15,14 @@ var yourPw = document.getElementById("password");
 
 
 
+
 submit.addEventListener("click",function(e){
-    var characters = char + sym + num + capschar;
-  
-    yourPw.value = password(charNum.value, (characters+sym+num));
+  var characters = char+capschar+num+sym;
+ characters += num;
+ characters += sym;
+  yourPw.value = password(charNum.value, characters);
 });
+
 
 function password(l,characters){
 		var pwd = '';
@@ -29,7 +32,7 @@ function password(l,characters){
     return pwd;
 }
 
-function myFunction() {
+function copyFunction() {
   var copyText = document.getElementById("password");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
